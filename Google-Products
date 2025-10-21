@@ -1,0 +1,15 @@
+Title:
+Description:
+Tags:
+Steps:
+
+--------------------------------
+Title: Increase Speed of Youtube Audio
+Description: Changes the speed of the audio on a Youtube video. 
+Tags: Speed, Youtube, Audio
+Steps:
+1. F12 for Inspect
+2. Go to Console
+3. enter: 
+$('video').playbackRate=x
+4. hit enter
