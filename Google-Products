@@ -1,10 +1,12 @@
 Title:
+Product: 
 Description:
 Tags:
 Steps:
 
 --------------------------------
 Title: Increase Speed of Youtube Audio
+Product: Chrome, Youtube
 Description: Changes the speed of the audio on a Youtube video. 
 Tags: Speed, Youtube, Audio
 Steps:
@@ -13,3 +15,16 @@ Steps:
 3. enter: 
 $('video').playbackRate=x
 4. hit enter
+
+--------------------------------
+
+Title: Reveal Password Field Hidden by Asterisk
+Product: Chrome
+Description: Bookmarklet that, when clicked, reveals a password field hidden by asterisks
+Tags: bookmarklet, chrome, password
+Steps:
+1. Create bookmark in Chrome
+2. Paste the following:
+javascript:Array.prototype.slice.call(document.querySelectorAll("input[type='password']"))    .map(function(el){el.setAttribute('type','text')})
+
+--------------------------------
