@@ -1,0 +1,75 @@
+{
+  "username": {
+    "user-scanner": [
+      {"cmd": "user-scanner -u {username}", "desc": "Check a single username across supported sites."},
+      {"cmd": "user-scanner -uf {usernamefile}", "desc": "Check every username listed in a file (one per line)."}
+    ],
+    "sherlock": [
+      {"cmd": "sherlock {username}", "desc": "Hunt a username across hundreds of social networks."},
+      {"cmd": "sherlock {username} --print-found --csv", "desc": "Show only hits and save results to CSV."}
+    ],
+    "social-analyzer": [
+      {"cmd": "social-analyzer --username \"{username}\" --metadata", "desc": "Profile search with metadata extraction."},
+      {"cmd": "social-analyzer --gui", "desc": "Launch the web GUI."}
+    ],
+    "spiderfoot": [
+      {"cmd": "spiderfoot -l 127.0.0.1:5001", "desc": "Start the SpiderFoot web UI on localhost:5001."},
+      {"cmd": "spiderfoot -s {username} -u all", "desc": "CLI scan of a target using all module use-cases."}
+    ],
+    "cupidcr4wl": [
+      {"cmd": "cd ~/investigator-cli/tools/cupidcr4wl && python3 cc.py -u {username}", "desc": "Launch cupidcr4wl and search a username against NSFW accounts."}
+    ]
+  },
+  "phone": {
+    "phoneinfoga": [
+      {"cmd": "phoneinfoga scan -n {phone}", "desc": "Scan a phone number (use international format, e.g. +14155550123)."},
+      {"cmd": "phoneinfoga serve -p 5000", "desc": "Start the web UI on port 5000."}
+    ],
+    "cupidcr4wl": [
+    {"cmd": "cd ~/investigator-cli/tools/cupidcr4wl && python3 cc.py -p {phone}", "desc": "Launch cupidcr4wl and search a phone number against NSFW accounts."}
+    ],
+    "ignorant": [
+    {"cmd": "ignorant 1 {phone}", "desc": "Was this number used to open Amazon, Instagram, or Snapchat accounts."}
+    ],
+    "phunter": [
+    {"cmd": "python3 phunter.py -t +{phone}", "desc": "Search for info available for a phone number."},
+    {"cmd": "python3 phunter.py -a +{phone}", "desc": "Search for Amazon registration of a phone number."}
+    ]
+  },
+  "email": {
+    "holehe": [
+      {"cmd": "holehe {email}", "desc": "Check which sites an email is registered on."},
+      {"cmd": "holehe --only-used {email}", "desc": "Show only sites where the email is registered."}
+    ],
+    "h8mail": [
+      {"cmd": "h8mail -t {email}", "desc": "Search for breached credentials tied to an email."}
+    ],
+    "theHarvester": [
+      {"cmd": "theHarvester -d {domain} -b all", "desc": "Harvest emails and hosts for a domain from all sources."}
+    ]
+  },
+  "domain": {
+    "whois": [
+      {"cmd": "whois {domain}", "desc": "Registration details for a domain."}
+    ],
+    "theHarvester": [
+      {"cmd": "theHarvester -d {domain} -b all", "desc": "Emails, subdomains, and hosts from public sources."}
+    ],
+    "subfinder": [
+      {"cmd": "subfinder -d {domain}", "desc": "Passive subdomain enumeration."}
+    ],
+    "amass": [
+      {"cmd": "amass enum -passive -d {domain}", "desc": "Passive subdomain enumeration (no direct contact with target)."}
+    ]
+  },
+  "network": {
+    "nmap": [
+      {"cmd": "nmap -sV {target}", "desc": "Service/version detection. Only scan systems you are authorized to test."},
+      {"cmd": "nmap -sn {target}", "desc": "Ping sweep: discover live hosts, no port scan."}
+    ],
+    "shodan": [
+      {"cmd": "shodan host {ip}", "desc": "Shodan's data on an IP (requires `shodan init <API_KEY>`)."},
+      {"cmd": "shodan search {query}", "desc": "Search Shodan with a query string."}
+    ]
+  }
+}
