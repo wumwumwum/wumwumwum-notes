@@ -3,3 +3,7 @@ This one I'm pretty proud of. This is a carver that I created out of frustration
 This script pulls recognized image files, regardless of footer, like Scalpel requires.
 
 Modify the location of the target file (ex. imgcache.0) as well as the output directory.
+
+To run, navigate to the directory where the script is stored. In terminal, run
+
+``python carver.py``
